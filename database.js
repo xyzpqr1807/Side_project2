@@ -15,7 +15,7 @@ const funnyPhotos = [
 
 // Add your FULL YouTube embed codes for Shorts / Videos here
 const ourVideos = [
-    `<iframe width="315" height="560" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`,
+    `<iframe width="368" height="655" src="https://www.youtube.com/embed/hDlsdmpWM_Q" title="VID20240915165637" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
 ];
 
 // Add your FULL YouTube embed codes for Music / Mixtapes here

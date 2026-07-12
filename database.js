@@ -21,4 +21,6 @@ const ourVideos = [
 // Add your FULL YouTube embed codes for Music / Mixtapes here
 const ourMixtape = [
     `<iframe width="560" height="315" src="https://www.youtube.com/embed/vuVn1r0DpeE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
+    `<iframe width="560" height="315" src="https://www.youtube.com/embed/N8dexd1PqEw?si=e6kfDpnqE22g5TKg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`
+
 ];

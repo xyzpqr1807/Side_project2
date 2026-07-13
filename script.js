@@ -148,14 +148,29 @@ function loadDatabaseContent() {
         if(funGallery) funnyPhotos.forEach((photo, i) => funGallery.appendChild(buildPhotoCard(photo, i)));
     }
     
-    // Load Vertical Shorts (Rendering Full Iframe from database)
+   // Load Vertical Shorts (Rendering as a Grid)
     if(typeof ourVideos !== 'undefined') {
         const vidGallery = document.getElementById('video-gallery');
         if(vidGallery) {
-            ourVideos.forEach(iframeCode => {
+            vidGallery.innerHTML = ''; // Clears existing content before building
+            ourVideos.forEach(videoData => {
                 let postContainer = document.createElement('div');
                 postContainer.className = 'short-post';
-                postContainer.innerHTML = iframeCode; // Injects full iframe code
+                
+                postContainer.innerHTML = `
+                    <div class="short-video-container">
+                        ${videoData.embed}
+                    </div>
+                    <div class="short-engagement">
+                        <button class="eng-btn" onclick="this.classList.toggle('liked'); this.innerText = this.classList.contains('liked') ? '❤️ 1M' : '🤍 1M';">🤍 1M</button>
+                        <button class="eng-btn">💬 45K</button>
+                        <button class="eng-btn">🔗 Share</button>
+                    </div>
+                    <div class="short-comments">
+                        <p><strong>@Tails Track and Tamasha</strong> ${videoData.caption}</p>
+                        <p><span class="fan-comment">@Falgun</span> ${videoData.myComment}</p>
+                    </div>
+                `;
                 vidGallery.appendChild(postContainer);
             });
         }

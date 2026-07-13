@@ -13,10 +13,24 @@ const funnyPhotos = [
     "photo3.jpg"
 ];
 
+
+
+
+
 // Add your FULL YouTube embed codes for Shorts / Videos here
 const ourVideos = [
-    `<iframe width="368" height="655" src="https://www.youtube.com/embed/hDlsdmpWM_Q" title="VID20240915165637" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+    `<iframe width="368" height="655" src="https://www.youtube.com/embed/YaPQB_vrqhQ" title="Tujhme Rab dikhta hai Song Cover #song #music #cover #tujhmerabdikhtahai #singer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+
+    `<iframe width="368" height="655" src="https://www.youtube.com/embed/tl-l3_9xukk" title="GHEWAR  Of Ambala  halwai bazaar  mini vlog #food #ghewar #ambala #vlog #ghewarrecipe" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+
+    `<iframe width="371" height="655" src="https://www.youtube.com/embed/jYlJoo71Zdc" title="First year college event  #viral" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`
 ];
+
+
+
+
+
+
 
 // Add your FULL YouTube embed codes for Music / Mixtapes here
 const ourMixtape = [

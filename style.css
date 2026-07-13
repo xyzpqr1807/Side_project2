@@ -67,14 +67,44 @@ body {
 .video-grid { display: flex; flex-direction: row; gap: 15px; overflow-x: auto; padding: 10px 4%; scrollbar-width: none; }
 .video-grid::-webkit-scrollbar { display: none; }
 
-/* --- REELS & EMBEDS STYLES --- */
-.reels-feed { display: flex; flex-direction: column; align-items: center; gap: 30px; padding: 20px 0; }
-.short-post {
-    width: 100%; max-width: 350px; aspect-ratio: 9/16; 
-    border-radius: 12px; overflow: hidden; background: #000;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 1px solid #333;
+/* --- VIP CREATOR PROFILE & REELS STYLES --- */
+.creator-profile { padding: 20px 4% 10px 4%; border-bottom: 1px solid #333; margin-bottom: 20px; display: flex; justify-content: center; }
+.profile-header { display: flex; align-items: center; gap: 20px; text-align: left; }
+.profile-pic { width: 80px; height: 80px; background: linear-gradient(45deg, #f2709c, #ff9472); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; border: 3px solid #e50914; }
+.creator-name { margin: 0; font-size: 1.5rem; display: flex; align-items: center; gap: 8px; }
+.verified-badge { background: #46d369; color: black; font-size: 0.8rem; width: 18px; height: 18px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; }
+.creator-handle { margin: 5px 0; color: #888; font-size: 0.9rem; font-weight: bold; }
+.creator-bio { margin: 5px 0 0 0; color: #ccc; font-size: 0.95rem; }
+
+.reels-feed { 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px; 
+    padding: 20px 4%; 
 }
-.short-post iframe { width: 100%; height: 100%; border: none; }
+.short-post {
+    width: 300px; 
+    background: #141414; 
+    border-radius: 12px; 
+    overflow: hidden; 
+    border: 1px solid #333;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
+    text-align: left;
+    flex-shrink: 0;
+}
+
+.short-video-container { width: 100%; aspect-ratio: 9/16; background: #000; position: relative; }
+.short-video-container iframe { width: 100%; height: 100%; border: none; position: absolute; top: 0; left: 0; }
+
+.short-engagement { display: flex; justify-content: space-between; padding: 15px; border-bottom: 1px solid #222; }
+.eng-btn { background: none; border: none; color: white; font-size: 1.2rem; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: transform 0.2s; }
+.eng-btn:hover { transform: scale(1.1); }
+.eng-btn.liked { color: #e50914; }
+
+.short-comments { padding: 15px; font-size: 0.9rem; color: #ddd; }
+.short-comments p { margin: 0 0 8px 0; }
+.fan-comment { color: #46d369; font-weight: bold; }
 
 .mixtape-post { width: 100%; max-width: 350px; height: 152px; margin: 0 10px 20px 10px; flex-shrink: 0; }
 .mixtape-post iframe { width: 100%; height: 100%; border: none; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
@@ -149,3 +179,11 @@ body {
 .scratch-prize h3 { margin:0; font-size: 1.5rem; }
 .scratch-prize p { margin:5px 0 0 0; color: white; }
 #scratchCanvas { position: absolute; top: 0; left: 0; cursor: pointer; }
+
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}

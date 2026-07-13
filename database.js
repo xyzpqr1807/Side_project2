@@ -17,15 +17,24 @@ const funnyPhotos = [
 
 
 
-// Add your FULL YouTube embed codes for Shorts / Videos here
+// Add your FULL YouTube embed codes and custom text for Shorts here
 const ourVideos = [
-    `<iframe width="368" height="655" src="https://www.youtube.com/embed/YaPQB_vrqhQ" title="Tujhme Rab dikhta hai Song Cover #song #music #cover #tujhmerabdikhtahai #singer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
-
-    `<iframe width="368" height="655" src="https://www.youtube.com/embed/tl-l3_9xukk" title="GHEWAR  Of Ambala  halwai bazaar  mini vlog #food #ghewar #ambala #vlog #ghewarrecipe" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
-
-    `<iframe width="371" height="655" src="https://www.youtube.com/embed/jYlJoo71Zdc" title="First year college event  #viral" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`
+    {
+        embed: `<iframe width="368" height="655" src="https://www.youtube.com/embed/YaPQB_vrqhQ" title="Tujhme Rab dikhta hai Song Cover" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+        caption: "Singing my heart out! 🎤✨",
+        myComment: "You have the most beautiful voice in the world. ❤️"
+    },
+    {
+        embed: `<iframe width="368" height="655" src="https://www.youtube.com/embed/tl-l3_9xukk" title="GHEWAR  Of Ambala  halwai bazaar  mini vlog" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+        caption: "Exploring Ambala for the best Ghewar! 🤤",
+        myComment: "We need to go back here for our next date!"
+    },
+    {
+        embed: `<iframe width="371" height="655" src="https://www.youtube.com/embed/jYlJoo71Zdc" title="First year college event" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+        caption: "First year college event memories! 🎉",
+        myComment: "I remember this day like it was yesterday! 🥰"
+    }
 ];
-
 
 
 

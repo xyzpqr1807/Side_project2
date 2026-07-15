@@ -230,42 +230,111 @@
             <h2 class="row-title">Interactive Specials 🎮</h2>
             
             <div id="games-menu" class="games-menu">
-                <div class="netflix-card game-card trivia-card" onclick="openGame('game-trivia')">
-                    <div>
-                        <h2>Trivia</h2>
-                        <p>How well do you remember?</p>
+                
+                <div class="netflix-card game-card trivia-card" onclick="openGame('game-trivia')" style="flex-direction: column; justify-content: space-between; padding: 50px 0 20px 0; box-sizing: border-box;">
+                    <div style="font-size: 5rem; text-shadow: 0 4px 10px rgba(0,0,0,0.5);">🧠</div>
+                    <div style="width: 100%; padding: 0 10px; box-sizing: border-box;">
+                        <h2 style="margin: 0; font-size: 1.5rem;">Trivia</h2>
+                        <p style="margin: 5px 0 0 0; font-size: 0.85rem; color: #ccc;">How well do you remember?</p>
                     </div>
                 </div>
-                <div class="netflix-card game-card scratch-card" onclick="openGame('game-scratch')">
-                    <div>
-                        <h2>Unlock Season 3</h2>
-                        <p>Scratch for a surprise!</p>
+
+                <div class="netflix-card game-card scratch-card" onclick="openGame('game-scratch')" style="flex-direction: column; justify-content: space-between; padding: 50px 0 20px 0; box-sizing: border-box;">
+                    <div style="font-size: 5rem; text-shadow: 0 4px 10px rgba(0,0,0,0.5);">🎟️</div>
+                    <div style="width: 100%; padding: 0 10px; box-sizing: border-box;">
+                        <h2 style="margin: 0; font-size: 1.5rem;">Reward Cards</h2>
+                        <p style="margin: 5px 0 0 0; font-size: 0.85rem; color: #ccc;">Scratch for a surprise!</p>
                     </div>
                 </div>
+
+                <div class="netflix-card game-card roulette-card" onclick="openGame('game-roulette')" style="flex-direction: column; justify-content: space-between; padding: 50px 0 20px 0; box-sizing: border-box;">
+                    <div style="font-size: 5rem; text-shadow: 0 4px 10px rgba(0,0,0,0.5);">🎡</div>
+                    <div style="width: 100%; padding: 0 10px; box-sizing: border-box;">
+                        <h2 style="margin: 0; font-size: 1.5rem;">Virtual Hangout</h2>
+                        <p style="margin: 5px 0 0 0; font-size: 0.85rem; color: #ccc;">Let fate decide our night!</p>
+                    </div>
+                </div>
+
+                <div class="netflix-card game-card memory-card" onclick="openGame('game-memory')" style="flex-direction: column; justify-content: space-between; padding: 50px 0 20px 0; box-sizing: border-box;">
+                    <div style="font-size: 5rem; text-shadow: 0 4px 10px rgba(0,0,0,0.5);">🧩</div>
+                    <div style="width: 100%; padding: 0 10px; box-sizing: border-box;">
+                        <h2 style="margin: 0; font-size: 1.5rem;">Memory Match</h2>
+                        <p style="margin: 5px 0 0 0; font-size: 0.85rem; color: #ccc;">Find the matching pairs.</p>
+                    </div>
+                </div>
+
+                <div class="netflix-card game-card open-when-card" onclick="openGame('game-open-when')" style="flex-direction: column; justify-content: space-between; padding: 50px 0 20px 0; box-sizing: border-box;">
+                    <div style="font-size: 5rem; text-shadow: 0 4px 10px rgba(0,0,0,0.5);">💌</div>
+                    <div style="width: 100%; padding: 0 10px; box-sizing: border-box;">
+                        <h2 style="margin: 0; font-size: 1.5rem;">Open When...</h2>
+                        <p style="margin: 5px 0 0 0; font-size: 0.85rem; color: #ccc;">Letters just for you.</p>
+                    </div>
+                </div>
+
             </div>
 
             <div id="game-trivia" class="game-container" style="display: none;">
                 <button class="btn-back" onclick="backToGames()">← Back to Games</button>
-                <h3>Where was our first date?</h3>
-                <button class="trivia-btn" onclick="alert('Try again! 😤')">The Coffee Shop</button>
-                <button class="trivia-btn" onclick="alert('Correct! ❤️')">That Pizza Place</button>
+                <div id="trivia-content">
+                    <h3 id="trivia-question">Loading question...</h3>
+                    <div id="trivia-choices"></div>
+                </div>
+                <div id="trivia-result" style="display: none; text-align: center;">
+                    <h2 id="trivia-score"></h2>
+                    <p id="trivia-message"></p>
+                    <button class="trivia-btn" onclick="startTrivia()">Play Again</button>
+                </div>
             </div>
 
             <div id="game-scratch" class="game-container scratch-container" style="display: none;">
                 <button class="btn-back" onclick="backToGames()">← Back to Games</button>
+                <button class="btn-back" onclick="initScratchCard()" style="float: right;">Try Another Card 🔄</button>
                 <div style="clear: both;"></div>
-                
-                <h3>Unlock Season 3 Bonus</h3>
+                <h3>Unlock Your Surprise</h3>
                 <p>Scratch below to reveal your prize!</p>
-                
                 <div class="scratch-wrapper">
-                    <div class="scratch-prize">
-                        <h3>🍕 Pizza Date!</h3>
-                        <p>Valid for one free night out.</p>
-                    </div>
-                    <canvas id="scratchCanvas" width="300" height="150"></canvas>
+                    <div class="scratch-prize" id="scratch-prize-content">
+                        </div>
+                    <canvas id="scratchCanvas" width="300" height="150" style="touch-action: none;"></canvas>
                 </div>
             </div>
+
+            <div id="game-roulette" class="game-container" style="display: none; text-align: center;">
+                <button class="btn-back" onclick="backToGames()" style="float: left;">← Back to Games</button>
+                <div style="clear: both;"></div>
+                <h3>What are we doing tonight?</h3>
+                <div class="roulette-box" id="roulette-result">🤔 Press Spin!</div>
+                <button class="btn-play" onclick="spinRoulette()" style="margin-top: 20px; width: 100%;">🎰 Spin the Wheel</button>
+            </div>
+
+            <div id="game-memory" class="game-container" style="display: none;">
+                <button class="btn-back" onclick="backToGames()">← Back to Games</button>
+                <h3 style="text-align: center;">Match the Memories</h3>
+                <div class="memory-grid" id="memory-grid"></div>
+            </div>
+
+            <div id="game-open-when" class="game-container" style="display: none;">
+                <button class="btn-back" onclick="backToGames()">← Back to Games</button>
+                <h3 style="text-align: center; margin-bottom: 20px;">Open me when you are feeling...</h3>
+                
+                <div class="emotions-grid" id="emotions-menu">
+                    <div class="emotion-item" onclick="openLetter('sad')">😢<br><span>Sad</span></div>
+                    <div class="emotion-item" onclick="openLetter('missing_me')">🥺<br><span>Missing Me</span></div>
+                    <div class="emotion-item" onclick="openLetter('angry')">😠<br><span>Angry</span></div>
+                    <div class="emotion-item" onclick="openLetter('happy')">🥰<br><span>Happy</span></div>
+                    <div class="emotion-item" onclick="openLetter('stressed')">😰<br><span>Stressed</span></div>
+                    <div class="emotion-item" onclick="openLetter('cant_sleep')">🦉<br><span>Can't Sleep</span></div>
+                    <div class="emotion-item" style="grid-column: span 2;" onclick="openLetter('insecure')">🫂<br><span>Doubtful</span></div>
+                </div>
+
+                <div id="letter-view" style="display: none;">
+                    <div class="letter-paper">
+                        <p id="letter-text">Loading...</p>
+                    </div>
+                    <button class="btn-play" onclick="closeLetter()" style="width: 100%; margin-top: 15px;">Close Letter 💌</button>
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -278,6 +347,6 @@
     </div>
 
     <script src="database.js"></script>
-    <script src="script.js"></script>
+    <script src="script.js?v=5"></script>
 </body>
 </html>

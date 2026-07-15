@@ -87,10 +87,15 @@ function backToGames() {
 // --- TRIVIA ENGINE ---
 const triviaQuestions = [
     { q: "Where was our first date?", options: ["The Coffee Shop", "That Pizza Place", "Movie Theater"], answer: 1 },
-    { q: "Who said 'I love you' first?", options: ["I did", "You did", "We said it together"], answer: 0 }, 
+    { q: "Who said 'I love you' first?", options: ["I did", "You did", "We said it together"], answer: 1 }, 
     { q: "What is my favorite nickname for you?", options: ["Babe", "Cupcake", "Honey"], answer: 1 },
-    { q: "What is my favorite color?", options: ["Red", "Blue", "Green"], answer: 0 },
-    { q: "Which movie did we watch on our first virtual date?", options: ["The Matrix", "Inception", "Interstellar"], answer: 2 }
+    { q: "Which movie did we watch on our first virtual date?", options: ["Kung Fu Panda", "Coco", "Up"], answer: 0 },
+    { q: "Who is more likely to fall asleep first on our late-night calls?", options: ["Me", "You", "We fall asleep at the exact same time"], answer: 1 },
+    { q: "What is my favorite thing about your voice?", options: ["How calming it is", "Your cute laugh", "When you get sleepy"], answer: 0 },
+    { q: "If we could close the distance tomorrow, what's the FIRST thing we are doing?", options: ["Getting food immediately", "Just hugging for hours", "Going to the movies"], answer: 1 },
+    { q: "If we had to survive a zombie apocalypse, who would die first?", options: ["I would", "You would", "We both will survive"], answer: 1 },
+    { q: "What is my absolute favorite emoji to send you when I'm trying to be cute?", options: ["🙈", "🥰", "🥺"], answer: 2 },
+    { q: "If our relationship was a Netflix series, what would the critics say?", options: ["Too much drama", "The most wholesome show ever", "Not worth wtaching"], answer: 1 }
 ];
 let currentQ = 0;
 let score = 0;
@@ -127,10 +132,21 @@ function showTriviaResult() {
 const dateIdeas = [
     "Netflix Party 🍿", 
     "Order Each Other Food 🍔", 
-    "Fall Asleep on Video Call 💤", 
-    "Play a Multiplayer Game 🎮", 
-    "Charcoal Sketching Challenge ✏️", 
-    "Deep Question Time 💬"
+    "Fall Asleep on Video Call 💤",  
+    "Deep Question Time 💬",
+    "Pinterest Dream House Building (Share screens & pin!) 🏡",
+    "Take ridiculous quizzes together 📝",
+    "Silent staring contest on camera (First to laugh loses) 😶",
+    "Write a crazy story one text at a time ✍️",
+    "Listen to a brand new album and rate each song in chat 🎶",
+    "Silent Study/Work Date (Cameras on, mic off) 🤫",
+    "Play Skribbl.io / Virtual Mini-Games 🎨",
+    "Plan our dream future vacation together ✈️",
+    "Send 5 photos & tell the stories behind them 👶",
+    "Read a book or story to each other over call 📖",
+    "Text-only Date 📱",
+    "Sync up and watch Reels together 🤣",
+    "Virtual House Hunting (Looking at crazy expensive mansions online) 🏰",
 ];
 
 function spinRoulette() {
@@ -149,9 +165,15 @@ function spinRoulette() {
 
 // --- SCRATCH CARD ENGINE (DYNAMIC LDR UPGRADE) ---
 function initScratchCard() {
-    const canvas = document.getElementById('scratchCanvas');
-    if(!canvas) return;
-    const ctx = canvas.getContext('2d');
+    let oldCanvas = document.getElementById('scratchCanvas');
+    if(!oldCanvas) return;
+
+    // 1. Clone the canvas FIRST to clear old event listeners
+    let newCanvas = oldCanvas.cloneNode(true);
+    oldCanvas.replaceWith(newCanvas);
+
+    // 2. NOW get the context of the active canvas in the DOM
+    const ctx = newCanvas.getContext('2d');
     let isDrawing = false;
 
     // Pick a random prize from database.js
@@ -163,23 +185,24 @@ function initScratchCard() {
         <h3>${randomPrize.title}</h3>
         <p>${randomPrize.desc}</p>
         <a href="https://wa.me/?text=${claimMessage}" target="_blank" style="text-decoration: none;">
-            <button class="btn-play" style="margin-top:10px; font-size: 0.9rem;">Claim via WhatsApp 💬</button>
+            <button class="btn-play" style="margin-top:10px; font-size: 0.9rem;">Claim via Snapchat 💬</button>
         </a>
     `;
 
-    // Reset and cover the canvas with gray
+    // 3. Draw the gray cover on the new canvas
     ctx.globalCompositeOperation = 'source-over';
     ctx.fillStyle = '#666';
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillRect(0, 0, newCanvas.width, newCanvas.height);
     ctx.font = '20px Helvetica';
     ctx.fillStyle = '#ddd';
     ctx.fillText('Scratch Here', 90, 80);
     ctx.globalCompositeOperation = 'destination-out';
 
+    // 4. Scratch logic pointing to the new canvas
     function scratch(e) {
         if (!isDrawing) return;
         e.preventDefault();
-        const rect = canvas.getBoundingClientRect();
+        const rect = newCanvas.getBoundingClientRect();
         
         const clientX = e.touches ? e.touches[0].clientX : e.clientX;
         const clientY = e.touches ? e.touches[0].clientY : e.clientY;
@@ -191,10 +214,7 @@ function initScratchCard() {
         ctx.fill();
     }
 
-    // Remove old listeners to prevent duplicates
-    canvas.replaceWith(canvas.cloneNode(true));
-    const newCanvas = document.getElementById('scratchCanvas');
-    
+    // 5. Attach listeners to the new canvas
     newCanvas.addEventListener('mousedown', () => isDrawing = true);
     newCanvas.addEventListener('mouseup', () => isDrawing = false);
     newCanvas.addEventListener('mouseleave', () => isDrawing = false); 

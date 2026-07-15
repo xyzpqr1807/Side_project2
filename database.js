@@ -51,10 +51,10 @@ const ourMixtape = [
 
 // --- NEW: SCRATCH CARD PRIZES (LDR & STRICT PARENT FRIENDLY) ---
 const scratchPrizes = [
-    { title: "🍔 Secret Food Delivery", desc: "Valid for one food delivery to your place whenever the coast is clear!" },
-    { title: "🎬 Teleparty Movie Night", desc: "You pick the movie, I'll bring the virtual popcorn." },
+    { title: "🍔 Secret Food Delivery", desc: "Valid for one food delivery to your place whenever possible!" },
+    { title: "🎬 Teleparty Movie Night", desc: "You pick the movie and we will watch it." },
     { title: "💤 Dedicated Sleep Call", desc: "We stay on call all night so I can fall asleep next to you." },
-    { title: "🎧 Co-Listening Session", desc: "We queue up our mixtape on Spotify and listen together in sync." },
+    { title: "🎧 Co-Listening Session", desc: "We queue up our mixtape on Spotify/Youtube and listen together in sync." },
     { title: "🎮 Virtual Game Night", desc: "Valid for one hour of playing your favorite multiplayer game together." }
 ];
 
@@ -62,9 +62,9 @@ const scratchPrizes = [
 const openWhenLetters = {
     sad: "Hey sweetheart, I am so sorry you are feeling down today. Just remember that I am always here for you, in your corner, cheering you on. Take a deep breath. I love you.",
     missing_me: "I am missing you so much too! Close your eyes and imagine me giving you the biggest, warmest hug right now. We will see each other soon! ❤️",
-    angry: "Take a deep breath. Whatever is frustrating you right now is temporary, but my love for you is permanent. Rant to me about it whenever you are ready. 😤",
+    angry: "Take a deep breath. Whatever is bothering you right now is temporary, but my love for you is permanent. You can always talk about it with me about it whenever you are ready. 😤",
     happy: "Seeing you happy is my favorite thing in the entire world! Keep smiling, because your smile literally lights up my life. ✨",
     stressed: "Take a deep breath, close your eyes, and count to ten. You are so strong, and this moment will pass. I am incredibly proud of how hard you work. You've got this, cupcake.",
     cant_sleep: "Tossing and turning? I wish I could be there to play with your hair until you fall asleep. Put on our mixtape, close your eyes, and imagine me right beside you. 🌙",
-    insecure: "Look at yourself through my eyes for a second. You are the most beautiful, talented, and amazing girl in the world. Never forget how much I admire you. 🫂"
+    insecure: "Look at yourself through my eyes for a second. You are the most beautiful, talented, and amazing girl in the world. Never forget how much I admire you. I can not live without you. 🫂"
 };

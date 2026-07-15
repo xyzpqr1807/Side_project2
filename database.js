@@ -16,7 +16,7 @@ const funnyPhotos = [
 // Add your FULL YouTube embed codes and custom text for Shorts here
 const ourVideos = [
     {
-        embed: `<iframe width="368" height="655" src="https://www.youtube.com/embed/YaPQB_vrqhQ" title="Tujhme Rab dikhta hai Song Cover" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+        embed: `<iframe width="491" height="655" src="https://www.youtube.com/embed/bEm6mAJkoTg" title="A surprise for me. ❤️ #love#viral" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
         caption: "A little surprise I got from someone special! 🙈❤️",
         myComment: "Hope you like it sweetheart. ❤️"
     },

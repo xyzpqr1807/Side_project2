@@ -1,24 +1,40 @@
 // Add your hopelessly romantic photos here
 const romanticPhotos = [
-    "photo1.jpg"
+    "https://cdn.postimage.me/2026/07/16/WhatsApp-Image-2025-11-22-at-23.46.42_6474abc5.jpg",
+    "https://i.postimg.cc/xyz98765/photo2.jpg"
 ];
 
 // Add your pure joy, smiling, and happy photos here
 const happyPhotos = [
-    "photo2.jpg"
+    "https://i.postimg.cc/123abc45/photo3.jpg"
 ];
 
 // Add the goofy, chaotic, and funny bloopers here
 const funnyPhotos = [
-    "photo3.jpg"
+    "https://i.postimg.cc/987xyz65/photo4.jpg"
 ];
 
 // Add your FULL YouTube embed codes and custom text for Shorts here
 const ourVideos = [
     {
-        embed: `<iframe width="491" height="655" src="https://www.youtube.com/embed/bEm6mAJkoTg" title="A surprise for me. ❤️ #love#viral" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+        embed: `<iframe width="491" height="655" src="https://www.youtube.com/embed/bEm6mAJkoTg" title="A surprise for me. ❤️ #love #viral" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
         caption: "A little surprise I got from someone special! 🙈❤️",
         myComment: "Hope you like it sweetheart. ❤️"
+    },
+    {
+        embed: <iframe width="368" height="655" src="https://www.youtube.com/embed/-Fypo3R-Fmc" title="Tumse milne ki tamana hai song cover #viral #song #cover" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>,
+        caption: "Tumse milne ki tamana hai ❤️",
+        myComment: "Meri bhi. 🙈❤️"
+    },
+    {
+        embed: <iframe width="368" height="655" src="https://www.youtube.com/embed/r9Uq54zUZmM" title="A special cover on special request ❤️ #song #cover #viral" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>,
+        caption: "Ve mai teri hogayi tu mainu ron na davi ❤️",
+        myComment: "Pta apna de aana hai main teriyan balawan nu. ❤️"
+    },
+    {
+        embed: `<iframe width="368" height="655" src="https://www.youtube.com/embed/IEb1qAGGt8E" title="What ve song fun #funreels #song #viral" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+        caption: "Very beautiful face mutiyar da 🥰",
+        myComment: "Very beautiful face mutiyar da tu jatt patt te 🙈"
     },
     {
         embed: `<iframe width="368" height="655" src="https://www.youtube.com/embed/YaPQB_vrqhQ" title="Tujhme Rab dikhta hai Song Cover" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
@@ -46,13 +62,14 @@ const ourMixtape = [
     `<iframe width="560" height="315" src="https://www.youtube.com/embed/1jO2wSpAoxA?si=Tr-pfqF60Wjcxr8q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
     `<iframe width="560" height="315" src="https://www.youtube.com/embed/WKbwopSXLWU?si=Ic70bgstxCK7nyEp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
     `<iframe width="560" height="315" src="https://www.youtube.com/embed/rNXmANj72ps?si=T4MKHsf90aeF6SGq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
-    `<iframe width="560" height="315" src="https://www.youtube.com/embed/p5EeJ9bHAOI?si=7yfaflQWGIiPjmhg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`
+    `<iframe width="560" height="315" src="https://www.youtube.com/embed/p5EeJ9bHAOI?si=7yfaflQWGIiPjmhg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+    `<iframe width="560" height="315" src="https://www.youtube.com/embed/ZuvXOZeD5g4?si=0WAKxAcaIoyHjOJn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
 ];
 
 // --- NEW: SCRATCH CARD PRIZES (LDR & STRICT PARENT FRIENDLY) ---
 const scratchPrizes = [
-    { title: "🍔 Secret Food Delivery", desc: "Valid for one food delivery to your place whenever possible!" },
-    { title: "🎬 Teleparty Movie Night", desc: "You pick the movie and we will watch it." },
+    { title: "🍔 Secret Food Delivery", desc: "Valid for one food delivery to your place whenever the coast is clear!" },
+    { title: "🎬 Teleparty Movie Night", desc: "You pick the movie, I'll bring the virtual popcorn." },
     { title: "💤 Dedicated Sleep Call", desc: "We stay on call all night so I can fall asleep next to you." },
     { title: "🎧 Co-Listening Session", desc: "We queue up our mixtape on Spotify/Youtube and listen together in sync." },
     { title: "🎮 Virtual Game Night", desc: "Valid for one hour of playing your favorite multiplayer game together." }

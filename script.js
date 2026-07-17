@@ -96,6 +96,7 @@ const triviaQuestions = [
     { q: "If we had to survive a zombie apocalypse, who would die first?", options: ["I would", "You would", "We both will survive"], answer: 1 },
     { q: "What is my absolute favorite emoji to send you when I'm trying to be cute?", options: ["🙈", "🥰", "🥺"], answer: 2 },
     { q: "If our relationship was a Netflix series, what would the critics say?", options: ["Too much drama", "The most wholesome show ever", "Not worth wtaching"], answer: 1 }
+
 ];
 let currentQ = 0;
 let score = 0;
@@ -132,21 +133,22 @@ function showTriviaResult() {
 const dateIdeas = [
     "Netflix Party 🍿", 
     "Order Each Other Food 🍔", 
-    "Fall Asleep on Video Call 💤",  
+    "Fall Asleep on Video Call 💤", 
+    "Play a Multiplayer Game 🎮",
     "Deep Question Time 💬",
-    "Pinterest Dream House Building (Share screens & pin!) 🏡",
-    "Take ridiculous quizzes together 📝",
-    "Silent staring contest on camera (First to laugh loses) 😶",
-    "Write a crazy story one text at a time ✍️",
-    "Listen to a brand new album and rate each song in chat 🎶",
     "Silent Study/Work Date (Cameras on, mic off) 🤫",
     "Play Skribbl.io / Virtual Mini-Games 🎨",
     "Plan our dream future vacation together ✈️",
     "Send 5 photos & tell the stories behind them 👶",
     "Read a book or story to each other over call 📖",
     "Text-only Date 📱",
-    "Sync up and watch Reels together 🤣",
+    "Sync up and watch funny Reels together 🤣",
     "Virtual House Hunting (Looking at crazy expensive mansions online) 🏰",
+    "Pinterest Dream House Building (Share screens & pin!) 🏡",
+    "Silent staring contest on camera (First to laugh loses) 😶",
+    "Write a crazy story one text at a time ✍️",
+    "Listen to a brand new album and rate each song in chat 🎶",
+    "Virtual Window Stargazing (If we both have a view!) 🌌"
 ];
 
 function spinRoulette() {
@@ -185,7 +187,7 @@ function initScratchCard() {
         <h3>${randomPrize.title}</h3>
         <p>${randomPrize.desc}</p>
         <a href="https://wa.me/?text=${claimMessage}" target="_blank" style="text-decoration: none;">
-            <button class="btn-play" style="margin-top:10px; font-size: 0.9rem;">Claim via Snapchat 💬</button>
+            <button class="btn-play" style="margin-top:10px; font-size: 0.9rem;">Claim via WhatsApp 💬</button>
         </a>
     `;
 
@@ -285,16 +287,16 @@ function checkMemoryMatch() {
 function buildPhotoCard(photoSrc, index) {
     let card = document.createElement('div');
     card.className = 'netflix-card';
-    let imgSrc = `images/${photoSrc}`;
+    
+    // Checks if the link is a web link (Postimages) or a local file
+    let imgSrc = photoSrc.startsWith('http') ? photoSrc : `images/${photoSrc}`;
+    
     card.innerHTML = `
         <img src="${imgSrc}" onclick="openImageModal('${imgSrc}')">
-        <div class="card-metadata" onclick="openImageModal('${imgSrc}')">
-            <div class="meta-match">100% Match</div>
-            <div>Episode ${index + 1}</div>
-        </div>
     `;
     return card;
 }
+
 function loadDatabaseContent() {
     if(typeof romanticPhotos !== 'undefined') {
         const romGallery = document.getElementById('romantic-gallery');

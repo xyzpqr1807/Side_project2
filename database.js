@@ -22,12 +22,12 @@ const ourVideos = [
         myComment: "Hope you like it sweetheart. ❤️"
     },
     {
-        embed: <iframe width="368" height="655" src="https://www.youtube.com/embed/-Fypo3R-Fmc" title="Tumse milne ki tamana hai song cover #viral #song #cover" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>,
+        embed: `<iframe width="368" height="655" src="https://www.youtube.com/embed/-Fypo3R-Fmc" title="Tumse milne ki tamana hai song cover #viral #song #cover" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
         caption: "Tumse milne ki tamana hai ❤️",
         myComment: "Meri bhi. 🙈❤️"
     },
     {
-        embed: <iframe width="368" height="655" src="https://www.youtube.com/embed/r9Uq54zUZmM" title="A special cover on special request ❤️ #song #cover #viral" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>,
+        embed: `<iframe width="368" height="655" src="https://www.youtube.com/embed/r9Uq54zUZmM" title="A special cover on special request ❤️ #song #cover #viral" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
         caption: "Ve mai teri hogayi tu mainu ron na davi ❤️",
         myComment: "Pta apna de aana hai main teriyan balawan nu. ❤️"
     },
